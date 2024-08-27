@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:disenos/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Stack(
         children: [
           //*Background
@@ -19,9 +21,11 @@ class HomeScreen extends StatelessWidget {
 }
 
 class HomeBody extends StatelessWidget {
+  const HomeBody({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       child: Column(
         children: [
           //Titulos

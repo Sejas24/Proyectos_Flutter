@@ -66,7 +66,7 @@ class _SliderScreenState extends State<SliderScreen> {
           Expanded(
             child: SingleChildScrollView(
               child: Image(
-                image: NetworkImage(
+                image: const NetworkImage(
                     'http://pngimg.com/uploads/spider_man/spider_man_PNG94.png'),
                 fit: BoxFit.contain,
                 width: _sliderValue,

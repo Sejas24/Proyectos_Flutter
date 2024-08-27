@@ -1,4 +1,5 @@
 import 'package:fl_components/widgets/widgets.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class InputsScreen extends StatelessWidget {
@@ -67,7 +68,7 @@ class InputsScreen extends StatelessWidget {
                           value: 'Developer', child: Text('Developer')),
                     ],
                     onChanged: (value) {
-                      print(value);
+                      // print(value);
                       formValues['role'] = value ?? 'Admin';
                     },
                   ),
@@ -78,10 +79,12 @@ class InputsScreen extends StatelessWidget {
                     onPressed: () {
                       FocusScope.of(context).requestFocus(FocusNode());
                       if (!myFormKey.currentState!.validate()) {
-                        print('Formulario no Valido');
+                        if (kDebugMode) {
+                          print('Formulario no Valido');
+                        }
                         return;
                       }
-                      print(formValues);
+                      // print(formValues);
                     },
                   ),
                 ],

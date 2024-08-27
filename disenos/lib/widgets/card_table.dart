@@ -3,10 +3,12 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class CardTable extends StatelessWidget {
+  const CardTable({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Table(
-      children: [
+      children: const [
         TableRow(
           children: [
             _SigleCard(
@@ -74,7 +76,7 @@ class _SigleCard extends StatelessWidget {
             ),
             radius: 30,
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             text,
             style: TextStyle(color: color, fontSize: 18),
@@ -93,7 +95,7 @@ class _CardBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
         child: BackdropFilter(
@@ -101,7 +103,7 @@ class _CardBackground extends StatelessWidget {
           child: Container(
             height: 180,
             decoration: BoxDecoration(
-              color: Color.fromRGBO(62, 66, 109, 0.7),
+              color: const Color.fromRGBO(62, 66, 109, 0.7),
               borderRadius: BorderRadius.circular(20),
             ),
             child: child,

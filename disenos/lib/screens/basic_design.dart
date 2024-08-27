@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class BasicDesignScreen extends StatelessWidget {
+  const BasicDesignScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
         body: Column(
       children: [
         //Image
@@ -28,8 +30,8 @@ class TextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 40, vertical: 40),
-      child: Text(
+      margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+      child: const Text(
           'dolor id eiusmod ex tempor labore labore enim elit magna Lorem sint. In est amet irure laboris et occaecat ullamco et. Consequat minim nisi excepteur enim ullamco ex in laboris anim in. Ut aute ipsum dolore mollit consequat nulla laborum nulla ipsum veniam. Nisi nulla commodo minim fugiat aliqua quis est magna commodo enim deserunt laboris. Consequat id proident dolore Lorem elit cillum est eu. Ex sint qui in magna veniam sunt'),
     );
   }
@@ -43,10 +45,10 @@ class Title extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 120, vertical: 40),
+      margin: const EdgeInsets.symmetric(horizontal: 120, vertical: 40),
       child: Row(
         children: [
-          Column(
+          const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -60,8 +62,8 @@ class Title extends StatelessWidget {
             ],
           ),
           Expanded(child: Container()),
-          Icon(Icons.star, color: Colors.red),
-          Text('41'),
+          const Icon(Icons.star, color: Colors.red),
+          const Text('41'),
         ],
       ),
     );
@@ -76,8 +78,8 @@ class ButtonSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-      child: Row(
+      margin: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
+      child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           CustomButton(icon: Icons.call, text: 'CALL'),
@@ -108,7 +110,7 @@ class CustomButton extends StatelessWidget {
           color: Colors.lightBlue,
           size: 30,
         ),
-        Text('$text', style: TextStyle(color: Colors.lightBlue)),
+        Text(text, style: const TextStyle(color: Colors.lightBlue)),
       ],
     );
   }

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class PageTitle extends StatelessWidget {
+  const PageTitle({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       bottom: false,
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-        child: Column(
+        margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+        child: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Classify transaction',

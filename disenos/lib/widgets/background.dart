@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class BackgroundScreen extends StatelessWidget {
-  final boxDecoration = BoxDecoration(
+  final boxDecoration = const BoxDecoration(
     gradient: LinearGradient(
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
@@ -14,6 +14,8 @@ class BackgroundScreen extends StatelessWidget {
       ],
     ),
   );
+
+  const BackgroundScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -41,7 +43,7 @@ class _PinkBox extends StatelessWidget {
         height: 410,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(80),
-            gradient: LinearGradient(colors: [
+            gradient: const LinearGradient(colors: [
               Color.fromRGBO(236, 98, 188, 1),
               Color.fromRGBO(241, 142, 172, 1),
             ])),

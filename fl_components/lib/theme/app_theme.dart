@@ -15,7 +15,7 @@ class AppTheme {
 
     //TextButton Theme
     textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(primary: primary),
+      style: TextButton.styleFrom(iconColor: primary),
     ),
 
     //FloatingActionButtons
@@ -27,7 +27,7 @@ class AppTheme {
     //Elevated Buttons
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: Colors.indigo,
+        iconColor: Colors.indigo,
         shape: const StadiumBorder(),
         elevation: 0,
       ),
